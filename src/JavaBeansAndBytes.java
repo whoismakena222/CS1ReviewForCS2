@@ -23,6 +23,8 @@ public class JavaBeansAndBytes {
 
     CoffeeDrink orderTwo;
 
+    CoffeeDrink orderThree;
+
     public static void main(String[] args) {
         // Create a new CoffeeShop instance to run everything.
         JavaBeansAndBytes cafe = new JavaBeansAndBytes();
@@ -44,8 +46,8 @@ public class JavaBeansAndBytes {
 
         // TODO
         // Update the year founded and print the new yearFounded in a sentence
-        yearFounded = 1990;
-        System.out.println("We were founded in " + yearFounded + ".");
+        yearFounded = 2007;
+        System.out.println("We were actually founded in " + yearFounded + ".");
 
         // Calling methods
         randomDiscount();
@@ -59,10 +61,12 @@ public class JavaBeansAndBytes {
         // Create two CoffeeDrink objects
         orderOne = new CoffeeDrink(2, "Iced Mocha", true);
         orderTwo = new CoffeeDrink(1, "Espresso", false);
+        orderThree = new CoffeeDrink(4, "Caramel Frap", true);
         // TODO
         // Print out the order details
         orderOne.printInfo();
         orderTwo.printInfo();
+        orderThree.printInfo();
 
     }
 
@@ -82,7 +86,7 @@ public class JavaBeansAndBytes {
         // Make this method accept a parameter representing the day’s special.
         // Print the day's special.
         flavor = paramflavor;
-        System.out.println("today's special is" + flavor);
+        System.out.println("Today's special is our tasty " + flavor + "!");
 
     }
 
@@ -94,15 +98,18 @@ public class JavaBeansAndBytes {
         // Write three different for loops that print the indicated numbers:
 
         // Print 1 to 5
-        for(int x = 1; x < 6; x = x + 1){
+        for(int x = 1; x < 6; x++){
         System.out.println(x);
         }
+        System.out.println("---");
         // Print 2, 5, 8, 11
         for(int x = 2; x < 12; x = x+3){
-            System.out.println(x);
+            System.out.print(x + ", ");
         }
+        System.out.println();
+        System.out.println("---");
         // Print 8 to 0
-        for(int x = 8; x >=0; x = x-1){
+        for(int x = 8; x >=0; x--){
             System.out.println(x);
         }
     }
@@ -114,16 +121,16 @@ public class JavaBeansAndBytes {
         // and print one of four drink recommendations based on its value.
         randomNum = Math.random();
         if(randomNum < 0.25){
-            System.out.println("We reccomend you try our Hot Cappuccino with macademia nut milk!");
+            System.out.println("We recommend you try our Hot Cappuccino with Macadamia nut milk!");
         }
         if(randomNum >= 0.25 && randomNum < 0.5){
-            System.out.println("We reccomend you try our Iced vanilla latte with caramel syrup!");
+            System.out.println("We recommend you try our Iced Vanilla Latte with Caramel Syrup!");
         }
         if(randomNum >= 0.5 && randomNum < 0.75){
-            System.out.println("We reccomend you try our creamy Hot chocolate!");
+            System.out.println("We recommend you try our creamy Hot Chocolate!");
             }
         if (randomNum >= 0.75 && randomNum <1){
-            System.out.println("We reccomend you try our fresh Cold Brew!");
+            System.out.println("We recommend you try our fresh Cold Brew!");
         }
 
     }
